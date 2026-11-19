@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fledge | Money skills for your first paycheck</title>
+<meta name="description" content="Fledge is a financial literacy app that helps young professionals budget, save, and invest from their very first paycheck.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M12 38c0-12 9-22 22-22 7 0 12 3 15 7l9-2-6 7c1 2 1 4 1 6 0 12-10 20-22 20-11 0-19-6-19-16z' fill='%2313203a'/><path d='M24 36c6 0 12 3 16 9-9 3-19 1-24-6 2-2 5-3 8-3z' fill='%23f2a541'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 38c0-12 9-22 22-22 7 0 12 3 15 7l9-2-6 7c1 2 1 4 1 6 0 12-10 20-22 20-11 0-19-6-19-16z" fill="#13203a"/><path d="M24 36c6 0 12 3 16 9-9 3-19 1-24-6 2-2 5-3 8-3z" fill="#f2a541"/><circle cx="40" cy="27" r="3" fill="#fff"/></svg>
+      Fledge
+    </a>
+    <div class="nav-links">
+      <a class="hide-sm" href="#why">Why Fledge</a>
+      <a class="hide-sm" href="#planner">Paycheck Planner</a>
+      <a class="btn btn-primary btn-sm" href="learn.html">How it works →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">🐣 Financial literacy, finally simple</span>
+      <h1>Money skills for your <em>first paycheck.</em></h1>
+      <p class="lede">Fledge turns your first real salary into a plan. Five-minute lessons, a paycheck planner, and auto-save challenges help new grads budget, build a safety net, and start investing without the jargon.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="learn.html">See how Fledge works →</a>
+        <a class="btn btn-ghost" href="#planner">Try the planner</a>
+      </div>
+      <div class="trust">
+        <div><strong>5 min</strong>lessons a week</div>
+        <div><strong>8</strong>core modules</div>
+        <div><strong>$0</strong>to start</div>
+      </div>
+    </div>
+    <div class="video-frame">
+      <video id="hero-video" autoplay muted loop playsinline preload="auto" aria-label="AI-generated video illustrating the Fledge concept">
+        <source src="media/hero.mp4" type="video/mp4">
+      </video>
+      <span class="video-tag">▶ AI-generated concept video</span>
+    </div>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Fledge</span>
+      <h2>School taught you calculus. Not compound interest.</h2>
+      <p>Most of us figure out money by trial and error, usually error. Fledge gives you the playbook on day one of your career.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="icon" style="background:rgba(42,157,143,.15)">📚</div>
+        <h3>Learn in minutes</h3>
+        <p>Bite-size lessons on budgeting, credit, 401(k)s, and taxes, written for humans and finished on a coffee break.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon" style="background:rgba(242,165,65,.2)">🎯</div>
+        <h3>Practice with real money</h3>
+        <p>Auto-save challenges move a little from every paycheck into savings, so good habits happen on autopilot.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon" style="background:rgba(231,111,81,.15)">📈</div>
+        <h3>Watch yourself grow</h3>
+        <p>Track your net worth, celebrate milestones, and see exactly how today's choices compound into tomorrow's freedom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="planner" id="planner">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">✨ Interactive · Paycheck Planner</span>
+      <h2>Where should your paycheck go?</h2>
+      <p>Type your monthly take-home pay, then drag the sliders. The sliders always balance to 100%, and the projection updates live.</p>
+    </div>
+    <div class="planner-grid" id="planner-app">
+      <div class="panel">
+        <div class="field">
+          <label for="pay">Monthly take-home pay</label>
+          <div class="money-input"><b>$</b><input id="pay" type="text" inputmode="decimal" value="3500" aria-label="Monthly take-home pay in dollars"></div>
+        </div>
+        <div class="field">
+          <label for="r-needs">Needs <small style="color:#aab4cc;font-weight:400">rent, groceries, bills</small><span id="l-needs">50%</span></label>
+          <input id="r-needs" class="r-needs" type="range" min="0" max="100" value="50">
+        </div>
+        <div class="field">
+          <label for="r-wants">Wants <small style="color:#aab4cc;font-weight:400">fun, dining, travel</small><span id="l-wants">30%</span></label>
+          <input id="r-wants" class="r-wants" type="range" min="0" max="100" value="30">
+        </div>
+        <div class="field">
+          <label for="r-save">Savings &amp; debt <small style="color:#aab4cc;font-weight:400">future you</small><span id="l-save">20%</span></label>
+          <input id="r-save" class="r-save" type="range" min="0" max="100" value="20">
+        </div>
+        <div class="presets">
+          <button class="chip preset" data-split="50/30/20">50/30/20 classic</button>
+          <button class="chip preset" data-split="60/20/20">High-rent city</button>
+          <button class="chip preset" data-split="50/20/30">Fast-track saver</button>
+          <button class="chip preset" data-split="70/25/5">Just starting</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="results">
+          <div class="donut">
+            <svg viewBox="0 0 200 200" width="220" height="220" aria-hidden="true">
+              <circle cx="100" cy="100" r="80" stroke="#0f1a30"/>
+              <circle id="arc-needs" cx="100" cy="100" r="80" stroke="#2a9d8f"/>
+              <circle id="arc-wants" cx="100" cy="100" r="80" stroke="#e76f51"/>
+              <circle id="arc-save" cx="100" cy="100" r="80" stroke="#f2a541"/>
+            </svg>
+            <div class="donut-center"><small>per month</small><strong id="d-total">$0</strong></div>
+          </div>
+          <div class="legend">
+            <div><i style="background:#2a9d8f"></i><span>Needs</span><b id="v-needs">$0</b></div>
+            <div><i style="background:#e76f51"></i><span>Wants</span><b id="v-wants">$0</b></div>
+            <div><i style="background:#f2a541"></i><span>Savings</span><b id="v-save">$0</b></div>
+          </div>
+        </div>
+        <div class="future">
+          <h3>Future you, if you invest the savings slice</h3>
+          <p class="small">Monthly contributions growing at a 7% average annual return. Illustration only, not a guarantee.</p>
+          <div class="future-row">
+            <div><small>In 10 years</small><strong id="f10">$0</strong></div>
+            <div><small>In 20 years</small><strong id="f20">$0</strong></div>
+            <div><small>In 30 years</small><strong id="f30">$0</strong></div>
+          </div>
+          <svg id="growth" class="growth" viewBox="0 0 600 130" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="verdict" id="verdict"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Leave the nest with a plan.</h2>
+    <p>See the full Fledge journey, from your first lesson to your first $10K, plus pricing and FAQs.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a class="btn btn-primary" href="learn.html">Explore how it works →</a>
+      <a class="btn btn-ghost" href="#" data-open-chat="How do I join the waitlist?">Join the waitlist</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="xfactor-note">
+      <h4>✨ X-Factor: the Paycheck Planner</h4>
+      <p>Enter your monthly take-home pay and drag the sliders. Fledge instantly splits it into needs, wants, and savings, animates the donut chart, and projects what your savings could grow to in 10, 20, and 30 years at a 7% return.</p>
+    </div>
+    <p class="fine">© 2026 Fledge, a class concept project. Educational content only; not financial advice.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
